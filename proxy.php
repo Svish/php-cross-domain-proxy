@@ -9,8 +9,8 @@
 // Get stuff
 $headers = getallheaders();
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
-$url = $headers['X-Proxy-Url'] ?? null;
-$cookie = $headers['X-Proxy-Cookie'] ?? null;
+$url = $headers['X-Proxy-Url'] ?? $headers['x-proxy-url'] ?? null;
+$cookie = $headers['X-Proxy-Cookie'] ?? $headers['x-proxy-cookie'] ?? null;
 
 
 
